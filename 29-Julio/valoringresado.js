@@ -7,11 +7,16 @@ const data = readline.createInterface({
 
 data.question("Ingrese cualquier dato: ", function(dato){
     let valorIngresado = parseFloat(dato);
-    let tipoDato = isNaN(valorIngresado);
+
+    if (isNaN(valorIngresado)) {
+        console.log("El dato ingresado no es un número válido.");
+    } else {
+        console.log("El dato ingresado es un número válido.");
+    }
 
     console.log(`El dato ingresado por el usuario fue: ${dato}`);
     console.log(`Resultado obtenido de paseFloat: ${valorIngresado}`);
-    console.log(`¿El dato no es un numero?: ${tipoDato}`);
+    console.log(`¿El dato no es un numero?: ${isNaN(valorIngresado)}`);
     data.close();
 })
 

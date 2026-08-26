@@ -7,11 +7,11 @@ const recibo = readline.createInterface({
 
 recibo.question("Ingrese el precio del producto: ", function(precio){
     recibo.question("Ingrese el descuento a aplicar: ", function(descuento){
-    let precioProducto = parseFloat(precio);
-    let porcentaje = parseFloat(descuento);
+        let precioProducto = parseFloat(precio);
+        let porcentaje = parseFloat(descuento);
 
-    let valorDescuento = precio * (porcentaje / 100);
-    let precioFinal = precioProducto - valorDescuento;
+        let valorDescuento = precio * (porcentaje / 100);
+        let precioFinal = precioProducto - valorDescuento;
 
     console.log(`Precio original: $${precioProducto.toFixed(2)}`);
     console.log(`Valor del descuento: $${valorDescuento.toFixed(2)}`); 
